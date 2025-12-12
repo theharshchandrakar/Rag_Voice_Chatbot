@@ -71,7 +71,7 @@ cd rag-voice-chatbot
 
 ```
 ### 3. Install Dependencies (using uv)
-This project uses **uv** for fast and strict dependency management.
+This project uses **uv** for fast and strict dependency management. (Alternatively, can use pip)
 
 **Install uv (Windows):**
 ```powershell

@@ -1,0 +1,45 @@
+uv is a modern package manager written in Rust, and it is significantly faster than pip—often boasting 10x to 100x speed improvements. It also unifies several tools like pip, virtualenv, and pip-tools into one command.
+
+Since you are running into issues with your existing venv and pip installation, setting up uv is a great way to resolve those environment headaches and get started with a much faster tool.
+
+Here is the process for installing uv on Windows and using it to set up your project.
+
+🛠️ Step 1: Install uv on Windows
+You have a few options for installing uv. The standalone installer using PowerShell is often the most direct method:
+
+Open PowerShell (You can search for it in your Windows Start menu).
+
+Run the following command:
+
+PowerShell
+
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+The -ExecutionPolicy ByPass flag is necessary to allow the script to run from the internet.
+
+Restart your terminal (the one that shows (venv)).
+
+🚀 Step 2: Use uv to Create the Environment and Install Packages
+Now that uv is installed, you can use it to completely replace the steps you were doing with python -m venv and pip install -r.
+
+A. Delete the Corrupted venv First, delete the old, problematic venv folder in your project directory (the same folder where main.py is).
+
+B. Create the Environment with uv
+
+In your project folder (e.g., G:\My Drive\RAG_Voice_Chatbot), run this command to create a new, clean virtual environment named .venv (this replaces python -m venv venv):
+
+Bash
+
+uv venv
+Activate the Environment You still need to activate it:
+
+PowerShell
+
+.\.venv\Scripts\Activate
+C. Install Requirements with uv
+
+The uv command to install from a requirements.txt file is uv pip install -r. This is faster and ensures your environment exactly matches the file.
+
+Bash
+
+uv pip install -r requirements.txt
+This should be significantly faster than what you experienced with pip and will resolve the missing module errors by creating a clean environment from scratch.

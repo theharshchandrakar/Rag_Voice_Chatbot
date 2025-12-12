@@ -1,0 +1,10 @@
+pytesseract
+Pillow
+sentence-transformers
+chromadb
+packaging
+transformers
+torch
+numpy
+scikit-learn
+pandas

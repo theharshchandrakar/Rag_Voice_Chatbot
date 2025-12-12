@@ -8,3 +8,5 @@ torch
 numpy
 scikit-learn
 pandas
+ollama
+colorama
